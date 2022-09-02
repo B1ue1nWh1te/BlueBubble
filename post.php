@@ -66,14 +66,11 @@ $this->need('header.php');
 		</script>
 	<?php endif; ?>
 	<section class="section section-lg section-hero section-shaped">
-		<?php printBackground(($this->fields->pic ? $this->fields->pic : getRandomImage($this->options->randomImage)), $this->options->bubbleShow); ?>
+		<?php printBackground(getRandomImage($this->options->randomImage), $this->options->bubbleShow); ?>
 		<div class="container shape-container d-flex align-items-center py-lg">
 			<div class="col px-0 text-center">
 				<div class="row align-items-center justify-content-center">
 					<h1 class="text-white"><?php $this->title() ?></h1>
-				</div>
-				<div class="row align-items-center justify-content-center">
-					<h5 class="text-white">于 <time datetime="<?php $this->date('c'); ?>"><?php $this->date(); ?></time> 由 <?php $this->author(); ?> 发布</h5>
 				</div>
 			</div>
 		</div>
@@ -85,69 +82,13 @@ $this->need('header.php');
 				<section class="section">
 					<div class="container">
 						<div class="content">
-							<?php if($this->hidden){ ?>
-							<div class="container text-center">
-								<form class="protected" id="protected" action="<?php $this->permalink() ?>" method="post">
-									<textarea name="text" style="display:none;"></textarea>
-									<p class="lead">写一下密码啦</p>
-									<div class="row justify-content-md-center">
-										<div class="col col-10">
-											<input class="form-control" type="password" name="protectPassword" id="protectPassword" placeholder="请输入密码">
-										</div>
-										<div class="col-md-auto">
-											<button type="submit" class="btn btn-info" id="protectButton">确认</button>
-										</div>
-									</div>
-								</form>
-								<script>
-									$("#protectPassword").on('focus', function() {
-										$(this).removeClass("is-invalid")
-									})
-									$("#protected").submit(function() {
-										var secr = <?php echo Typecho_Common::shuffleScriptVar($this->security->getToken(clear_urlcan($this->request->getRequestUrl()))); ?>
-										$("#protectButton").attr("disabled", true);
-										$.ajax({
-											url: $(this).attr("action") + "?_=" + secr,
-											type: $(this).attr("method"),
-											data: $(this).serializeArray(),
-											complete: function() {
-												$("#protectButton").attr("disabled", false);
-											},
-											error: function() {
-
-											},
-											success: function(data) {
-												if (data) {
-													var parser = new DOMParser()
-													var htmlDoc = parser.parseFromString(data, "text/html")
-													if (htmlDoc.title == "Error") {
-														$("#protectPassword").addClass("is-invalid")
-
-													} else {
-														$("#protectPassword").addClass("is-valid")
-														$("#protected").fadeOut();
-														setTimeout(function() {
-															$("title").html(htmlDoc.title)
-															$("#pjax-container").html(htmlDoc.getElementById("pjax-container").innerHTML)
-														}, 1000)
-
-													}
-												}
-											}
-										})
-										return false
-									})
-								</script>
-							</div>
-							<?php }else{ ?>
-							<?php
-                $this->content();
-							?>
-							<hr>
-							<ul>
-								<li>分类：<?php printCategory($this); ?></li>
-								<li>标签：<?php printTag($this); ?></li>
-							</ul>
+							<?php $this->content(); ?>
+							<?php if (!$this->hidden) { ?>
+								<hr />
+								<ul>
+									<li>分类：<?php printCategory($this); ?></li>
+									<li>标签：<?php printTag($this); ?></li>
+								</ul>
 							<?php } ?>
 						</div>
 					</div>

@@ -28,7 +28,7 @@ function parseBbcode() {
 function parseBblink() {
     let obj = document.getElementsByTagName('bblink');
     for (let i = 0; i < obj.length; i++) {
-        obj[i].setAttribute('class', 'card shadow card-lift--hover friend-card');
+        obj[i].setAttribute('class', 'card card-lift--hover friend-card');
         let ico = obj[i].getAttribute('icon');
         let lnk = obj[i].getAttribute('link');
         let des = obj[i].getAttribute('des');
