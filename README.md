@@ -8,6 +8,7 @@ Typecho 简约美观现代化风格主题，基于[Bubble](https://github.com/tr
 
 [![Lisence](https://img.shields.io/github/license/B1ue1nWh1te/BlueBubble)](https://github.com/B1ue1nWh1te/SeaBot_QQ/blob/main/LICENSE)
 [![Release](https://img.shields.io/github/v/release/B1ue1nWh1te/BlueBubble)](https://github.com/B1ue1nWh1te/BlueBubble/releases/)
+[![Visitors](https://visitor-badge.glitch.me/badge?page_id=B1ue1nWh1te-BlueBubble&left_color=gray&right_color=orange)](https://github.com/B1ue1nWh1te/BlueBubble)
 
 </div>
 
