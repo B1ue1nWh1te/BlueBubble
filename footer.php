@@ -15,6 +15,7 @@
 	<?php } ?>
 <?php } ?>
 </main>
+
 <!-- Footer -->
 <footer class="footer">
 	<div class="container">
@@ -37,14 +38,18 @@
 		<span class="btn-inner--icon"><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
 	</button>
 </a>
+
 <!-- Core -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
+
 <!-- Optional plugins -->
 <script src="https://cdn.jsdelivr.net/npm/headroom.js@0.11.0/dist/headroom.min.js"></script>
+
 <!-- Theme JS -->
 <script src="<?php $this->options->themeUrl("assets/js/argon.min.js"); ?>"></script>
 <script src="<?php $this->options->themeUrl("assets/js/bbrender.js"); ?>"></script>
+
 <!-- scrollup -->
 <script>
 	$(function() {
@@ -79,8 +84,8 @@
 		});
 	});
 </script>
-<!-- Pjax -->
 
+<!-- Pjax -->
 <script>
 	function init() {
 		<?php if ($this->options->prismjs and $this->options->prismLine) : ?>
@@ -181,11 +186,13 @@
 	</script>
 	<div class="black-cover" style="display: none;"></div>
 <?php endif; ?>
+
 <!-- KaTeX JS -->
 <?php if ($this->options->katex) : ?>
 	<script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
 <?php endif; ?>
+
 <!-- Prism JS -->
 <?php if ($this->options->prismjs) : ?>
 	<script src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/components/prism-core.min.js"></script>
@@ -197,6 +204,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
 	<?php endif; ?>
 <?php endif; ?>
+
 <!-- Alert -->
 <div id="modal-notification" class="modal fade show" id="modal-notification" style="z-index: 102;display: none;">
 	<div class="modal-dialog modal-sm">
@@ -218,8 +226,9 @@
 		else $("#msgDetail").html("")
 		$("#modal-notification").show("normal");
 	}
-	init()
+	init()	
 </script>
+
 <!-- Typecho footer -->
 <?php $this->footer(); ?>
 </body>

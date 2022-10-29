@@ -27,6 +27,7 @@ $this->need('header.php');
 					</div>
 				</section>
 			</div>
+			
 			<!-- Comment -->
 			<?php if (!$this->hidden && $this->allow('comment')) : ?>
 				<div class="card shadow content-card">

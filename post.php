@@ -60,7 +60,6 @@ $this->need('header.php');
 							break
 						}
 					}
-					//
 				})
 			});
 		</script>

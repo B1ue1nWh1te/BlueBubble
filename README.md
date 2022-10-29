@@ -20,7 +20,7 @@ Typecho 简约美观现代化风格主题，基于[Bubble](https://github.com/tr
 
 </div>
 
-![demo](screenshot.jpg)
+![demo](images/screenshot.jpg)
 
 # 使用
 

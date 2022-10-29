@@ -60,11 +60,14 @@
 			<?php $this->options->customCss(); ?>
 		</style>
 	<?php endif; ?>
+
 	<!-- Viewer.js Plugin -->
 	<script src="https://cdn.jsdelivr.net/npm/viewerjs/dist/viewer.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/fengyuanchen/jquery-viewer@master/dist/jquery-viewer.min.js"></script>
+
 	<!-- Typecho header -->
 	<?php $this->header(); ?>
+	
 	<!-- Baidu statistics -->
 	<script>
 		var _hmt = _hmt || [];

@@ -31,6 +31,7 @@ $this->need('header.php');
 					<?php printAricle($this, $first_flag);
 					$first_flag = false; ?>
 				<?php endwhile; ?>
+				
 				<!-- Toggle page -->
 				<?php printToggleButton($this); ?>
 			<?php else : ?>
