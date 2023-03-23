@@ -2,6 +2,7 @@ changeprogress = function (progress) {
 	progress -= 4
 	$("#argprogress .progress-bar").css("width", `${progress}%`)
 }
+
 function start_progress() {
 	var tick = 1
 	$("#argprogress").fadeIn(150)

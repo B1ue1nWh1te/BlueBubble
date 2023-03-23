@@ -31,6 +31,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
+  --font-family: 'Noto Serif SC', serif;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
 }
@@ -42,7 +43,7 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-family: var(--font-family);
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -64,7 +65,7 @@ section {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-family);
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -148,7 +149,8 @@ dfn {
 
 b,
 strong {
-  font-weight: bolder
+  font-weight: bolder;
+  margin: auto 0.4rem;
 }
 
 small {
@@ -175,7 +177,12 @@ a {
   text-decoration: none;
   color: #5e72e4;
   background-color: transparent;
-  -webkit-text-decoration-skip: objects
+  -webkit-text-decoration-skip: objects;
+}
+
+p a {
+  margin: auto 0.4rem;
+  word-break: keep-all;
 }
 
 a:hover {
@@ -202,7 +209,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-family);
   font-size: 1em
 }
 
@@ -388,13 +395,13 @@ h6 {
 
 .h1,
 h1 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 700
 }
 
 .h2,
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 700
 }
 
@@ -535,8 +542,9 @@ mark {
 
 code {
   font-weight: 700;
-  word-break: break-word;
-  color: #5b99f7
+  word-break: keep-all;
+  color: #5b99f7;
+  margin: auto 0.4rem;
 }
 
 a>code {
@@ -572,7 +580,7 @@ pre code {
   position: relative;
   display: block;
   overflow-x: auto;
-  margin: 4.4px 0 0.4px 1px;
+  margin: 5px 0 0 0;
   padding: 0;
   max-height: 650px;
   padding-left: 3.5em
@@ -4861,7 +4869,7 @@ input[type="submit"].btn-block {
 }
 
 .navbar-light .navbar-toggler-icon {
-  background-image: url('data:image/svg+xml !default;charset=utf8,%3CsvgviewBox=\'003030\'xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpathstroke=\'rgba(0,0,0,0.5)\'stroke-width=\'2\'stroke-linecap=\'round\'stroke-miterlimit=\'10\'d=\'M47h22M415h22M423h22\'/%3E%3C/svg%3E')
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHdJREFUWEftlssNgDAMQ+NJGaWwCZu6Kic+RZzykXAHyHMd2Qos+SGZbxLwcIDkbmaL02o2AOt59kwAneDHWAAXZkkBw6Lm5ML3CpzAr2MVQzlQzwE1Icn0KlYThrZxvRiGfn/cB9HAO6+eADWhmjA6FfVS8DsHOu7VNiEDlDkzAAAAAElFTkSuQmCC')
 }
 
 .navbar-light .navbar-text {
@@ -6233,7 +6241,7 @@ button.close {
 }
 
 .tooltip {
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-family);
   font-size: 0.875rem;
   font-weight: 400;
   font-style: normal;
@@ -6356,7 +6364,7 @@ button.close {
 }
 
 .popover {
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-family);
   font-size: 0.875rem;
   font-weight: 400;
   font-style: normal;
@@ -8569,7 +8577,7 @@ button.bg-darker:hover {
 
 .pb-5,
 .py-5 {
-  padding-bottom: 3rem !important
+  padding-bottom: 0 !important
 }
 
 .pl-5,
@@ -11094,7 +11102,8 @@ main {
 
 main {
   overflow: hidden;
-  background-color: #f4f5f7
+  background-color: #f4f5f7;
+  padding-bottom: 3rem;
 }
 
 .section-nucleo-icons .icons-container {
@@ -14052,7 +14061,7 @@ textarea[resize="horizontal"] {
 }
 
 .navbar-nav .nav-link {
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-family);
   font-size: 1.2rem;
   font-weight: bold;
   transition: all 0.15s linear;
@@ -14204,7 +14213,6 @@ textarea[resize="horizontal"] {
 }
 
 .navbar-transparent .navbar-toggler-icon {
-  background-image: url(https://img.seaeye.cn/img/icon_list.png)
 }
 
 @media (min-width:768px) {
@@ -14927,8 +14935,8 @@ textarea[resize="horizontal"] {
 
 .section {
   position: relative;
-  padding-top: 4rem;
-  padding-bottom: 4rem
+  padding-top: 2rem;
+  padding-bottom: 2rem
 }
 
 .section-xl {
@@ -15506,7 +15514,8 @@ textarea[resize="horizontal"] {
 p {
   font-size: 1.2rem;
   font-weight: 300;
-  line-height: 1.7
+  line-height: 1.5;
+  letter-spacing: 1px;
 }
 
 .lead {
@@ -16283,7 +16292,16 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .content {
   margin-left: 80px;
-  margin-right: 80px
+  margin-right: 80px;
+}
+
+.nothing{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
 @media screen and (max-width:768px) {
@@ -16294,12 +16312,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 }
 
 .content img {
-  max-width: 100%;
   display: block;
+  width: 80%;
+  margin: 2rem auto;
+  border-radius: 0.5rem;
   cursor: pointer;
-  margin: 2rem auto 2.5rem auto;
-  width: 75%;
-  border-radius: 0.5rem
 }
 
 .avatar {
@@ -16451,7 +16468,7 @@ table {
 }
 
 .headroom--not-top .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3CsvgviewBox='003030'xmlns='http://www.w3.org/2000/svg'%3E%3Cpathstroke='rgba(50,50,93,0.95)'stroke-width='2'stroke-linecap='round'stroke-miterlimit='10'd='M47h22M415h22M423h22'/%3E%3C/svg%3E") !important
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHRJREFUWEftlNENgDAIRHsbwgSOYt3EDWBD/DKxaWL8QfpxHYC7PMpDK34ozm8sMBEQkRPAlrGaiDjcvT9nTwVUNTLC75lmNmSuV0BEOoA9g8KnFWQEv83kGZLAegRownIV04RUMQmUE6AJacLyT8gCfxO4ALYQSCEUVDRwAAAAAElFTkSuQmCC") !important
 }
 
 .navbar .input-group {
@@ -16499,7 +16516,7 @@ table {
 
 @media screen and (max-width:768px) {
   .content-card {
-    margin: 0 !important
+    margin: 1.2rem 0.6rem !important
   }
 
   .content-card-head {
@@ -16806,8 +16823,9 @@ h3,
 h4 {
   color: #4f64db;
   width: fit-content;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
   border-bottom: 3px solid;
-  margin-top: 1.2rem
 }
 
 li a {
@@ -16843,17 +16861,25 @@ li a {
   height: 60px;
 }
 
+.more{
+  display: none;
+}
+
+#toc-nomiao{
+  cursor: pointer;
+}
+
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 15px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.4);
+  background: #c7c7c7;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  border-radius: 10px;
   background: rgba(0, 0, 0, 0);
+  border-radius: 10px;
 }
