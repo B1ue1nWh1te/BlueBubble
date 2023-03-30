@@ -5,7 +5,7 @@
  * 
  * @package BlueBubble
  * @author B1ue1nWh1te
- * @version 1.0.2
+ * @version 1.0.3
  * @link https://github.com/B1ue1nWh1te/BlueBubble
  */
 
