@@ -1,22 +1,8 @@
-<div align="center">
-
-# BlueBubble
-
-![data](https://socialify.git.ci/B1ue1nWh1te/BlueBubble/image?description=1&font=Rokkitt&forks=1&issues=1&language=1&owner=1&pattern=Circuit%20Board&stargazers=1&theme=Dark)
-
-Typecho 简约美观现代化风格主题，基于[Bubble](https://github.com/trinitrotofu/Bubble)主题魔改。
-
-[![Lisence](https://img.shields.io/github/license/B1ue1nWh1te/BlueBubble)](https://github.com/B1ue1nWh1te/SeaBot_QQ/blob/main/LICENSE)
-[![Release](https://img.shields.io/github/v/release/B1ue1nWh1te/BlueBubble)](https://github.com/B1ue1nWh1te/BlueBubble/releases/)
-[![Visitors](https://visitor-badge.glitch.me/badge?page_id=B1ue1nWh1te-BlueBubble&left_color=gray&right_color=orange)](https://github.com/B1ue1nWh1te/BlueBubble)
-
-</div>
-
-# Demo:
+# 示例
 
 <div align="center">
 
-博客链接：[https://www.seaeye.cn/](https://www.seaeye.cn/)
+[博客链接](https://www.seaeye.cn/)
 
 </div>
 
@@ -26,7 +12,7 @@ Typecho 简约美观现代化风格主题，基于[Bubble](https://github.com/tr
 
 ## 安装
 
-在 [Releases](https://github.com/B1ue1nWh1te/BlueBubble/releases) 下载 zip 文件，将所有文件解压到 Typecho 主题目录（./usr/themes）。
+在 [Releases](https://github.com/B1ue1nWh1te/BlueBubble/releases) 下载 zip 文件，将所有文件解压到 Typecho 主题目录（./usr/themes/BlueBubble）。
 
 ## 设置
 
@@ -66,7 +52,7 @@ URL 之间用换行隔开，即每行一个 URL，**请勿包含多余字符**�
 
 该项用以设定页脚内容，可添加 HTML 代码以实现更丰富的功能。
 
-> 自定义 css
+> 自定义 CSS
 
 该项用以提供自定义 css 接口，用户可以填入自己需要的 css 代码来改变主题外观，例如更改字体大小。自定义 css 的生效不需要清空缓存。
 
@@ -133,7 +119,9 @@ myFunction();
 语法：
 
 ```html
+!!!
 <bbcode type="颜色类型">代码框内容</bbcode>
+!!!
 ```
 
 示例：
@@ -164,23 +152,9 @@ myFunction();
 语法：
 
 ```html
-<bblist>
-  <bblink link="友链 URL" icon="友链图标 URL" des="友链描述">友链名称</bblink>
-</bblist>
-```
-
-示例：
-
-```markdown
 !!!
 <bblist>
-<bblink link="https://acmezone.top/" icon="https://img.seaeye.cn/img/friends_avatar/Xayah.jpg" des="AcmeZone">Xayah</bblink>
-<bblink link="https://noionion.top/" icon="https://img.seaeye.cn/img/friends_avatar/noionion.jpg" des="贰猹の小窝">noionion</bblink>
-</bblist>
-
-<bblist>
-<bblink link="https://cyp0633.icu/" icon="https://img.seaeye.cn/img/friends_avatar/cyp0633.jpg" des="cyp0633's blog">cyp0633</bblink>
-<bblink link="https://blog.mufanc.xyz/" icon="https://img.seaeye.cn/img/friends_avatar/Mufanc.jpg" des="星河璀璨丶凡尘點點">Mufanc</bblink>
+  <bblink link="友链 URL" icon="友链图标 URL" des="友链描述">友链名称</bblink>
 </bblist>
 !!!
 ```

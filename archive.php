@@ -11,12 +11,12 @@ $this->need('header.php');
                 <div class="row align-items-center justify-content-center">
                     <h1 class="text-white">
                         <?php $this->archiveTitle(array(
-							'category' => _t('%s'),
-							'search' => _t('%s的搜索结果'),
-							'tag' => _t('%s'),
-							'author' => _t('%s的文章')
-						), '');
-						?>
+                            'category' => _t('%s'),
+                            'search' => _t('%s的搜索结果'),
+                            'tag' => _t('%s'),
+                            'author' => _t('%s的文章')
+                        ), '');
+                        ?>
                     </h1>
                 </div>
             </div>
@@ -26,25 +26,25 @@ $this->need('header.php');
         <div class="container container-lg py-5 align-items-center content-card-container">
             <!-- Article list -->
             <?php if ($this->have()) : ?>
-            <?php $first_flag = true; ?>
-            <?php while ($this->next()) : ?>
-            <?php printAricle($this, $first_flag);
-					$first_flag = false; ?>
-            <?php endwhile; ?>
+                <?php $first_flag = true; ?>
+                <?php while ($this->next()) : ?>
+                    <?php printAricle($this, $first_flag);
+                    $first_flag = false; ?>
+                <?php endwhile; ?>
 
-            <!-- Toggle page -->
-            <?php printToggleButton($this); ?>
+                <!-- Toggle page -->
+                <?php printToggleButton($this); ?>
             <?php else : ?>
-            <div class="card shadow content-card list-card content-card-head">
-                <section class="section">
-                    <div class="container">
-                        <div class="content nothing">
-                            <h1>什么也没有找到</h1>
-                            <p>尝试一下其他关键词吧</p>
+                <div class="card shadow content-card list-card content-card-head">
+                    <section class="section">
+                        <div class="container">
+                            <div class="content nothing">
+                                <h1>什么也没有找到</h1>
+                                <p>尝试一下其他关键词吧</p>
+                            </div>
                         </div>
-                    </div>
-                </section>
-            </div>
+                    </section>
+                </div>
             <?php endif; ?>
         </div>
     </section>

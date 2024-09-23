@@ -10,28 +10,28 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <title>
-        <?php 
-            $this->archiveTitle(array(
-                'category'  =>  _t('%s 下的文章'),
-                'search'    =>  _t('包含关键字 %s 的文章'),
-                'tag'       =>  _t('标签 %s 下的文章'),
-                'author'    =>  _t('%s 的文章')
-            ), '', ' - '); 
+        <?php
+        $this->archiveTitle(array(
+            'category'  =>  _t('%s 下的文章'),
+            'search'    =>  _t('包含关键字 %s 的文章'),
+            'tag'       =>  _t('标签 %s 下的文章'),
+            'author'    =>  _t('%s 的文章')
+        ), '', ' - ');
         ?>
         <?php
-            $this->options->title();
-            if ($this->is('index') && $this->options->subtitle != '') echo " - {$this->options->subtitle}";
+        $this->options->title();
+        if ($this->is('index') && $this->options->subtitle != '') echo " - {$this->options->subtitle}";
         ?>
     </title>
 
     <!-- Favicon -->
     <link type="image/png" rel="icon" href="
         <?php
-            if ($this->options->logoUrl == '') {
-                $this->options->themeUrl("images/logo.png");
-            } else {
-                $this->options->logoUrl();
-            }
+        if ($this->options->logoUrl == '') {
+            $this->options->themeUrl("images/logo.png");
+        } else {
+            $this->options->logoUrl();
+        }
         ?>">
 
     <!-- Font -->
@@ -46,15 +46,15 @@
 
     <!-- Custom CSS -->
     <?php if ($this->options->customCss) : ?>
-    <style type="text/css">
-    <?php $this->options->customCss();
-    ?>
-    </style>
+        <style type="text/css">
+            <?php $this->options->customCss();
+            ?>
+        </style>
     <?php endif; ?>
 
     <!-- KaTeX CSS -->
     <?php if ($this->options->katex) : ?>
-    <link type="text/css" rel="stylesheet" href="<?php $this->options->themeUrl("assets/css/katex.min.css"); ?>">
+        <link type="text/css" rel="stylesheet" href="<?php $this->options->themeUrl("assets/css/katex.min.css"); ?>">
     <?php endif; ?>
 
     <!-- Viewer CSS -->
@@ -62,12 +62,12 @@
 
     <!-- PrismJS CSS -->
     <?php if ($this->options->prismjs) : ?>
-    <link type="text/css" rel="stylesheet" href="<?php $this->options->themeUrl("assets/css/prism-tomorrow.css"); ?>" />
-    <link type="text/css" rel="stylesheet" href="<?php $this->options->themeUrl("assets/css/prism-toolbar.css"); ?>" />
-    <?php if ($this->options->prismLine) : ?>
-    <link type="text/css" rel="stylesheet"
-        href="<?php $this->options->themeUrl("assets/css/prism-line-numbers.css"); ?>" />
-    <?php endif; ?>
+        <link type="text/css" rel="stylesheet" href="<?php $this->options->themeUrl("assets/css/prism-tomorrow.css"); ?>" />
+        <link type="text/css" rel="stylesheet" href="<?php $this->options->themeUrl("assets/css/prism-toolbar.css"); ?>" />
+        <?php if ($this->options->prismLine) : ?>
+            <link type="text/css" rel="stylesheet"
+                href="<?php $this->options->themeUrl("assets/css/prism-line-numbers.css"); ?>" />
+        <?php endif; ?>
     <?php endif; ?>
 
     <!-- Typecho Header -->
@@ -78,13 +78,13 @@
 
     <!-- Baidu Statistics -->
     <script>
-    var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?<?php $this->options->baiduStatisticsKey(); ?>";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?<?php $this->options->baiduStatisticsKey(); ?>";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
     </script>
 </head>
 
@@ -117,13 +117,13 @@
                     </div>
                     <ul class="navbar-nav ml-lg-auto align-items-lg-center">
                         <?php
-						$this->widget('Widget_Contents_Page_List')->to($pages);
-						while ($pages->next()) :
-						?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?php $pages->permalink(); ?>"
-                                title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
-                        </li>
+                        $this->widget('Widget_Contents_Page_List')->to($pages);
+                        while ($pages->next()) :
+                        ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php $pages->permalink(); ?>"
+                                    title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
+                            </li>
                         <?php endwhile; ?>
                         <li class="navbar_search_container">
                             <form method="post" action="" id="search">

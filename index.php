@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Typecho 简约美观现代化风格主题，基于 Bubble 主题魔改。
+ * 基于 Bubble 主题进行个性化定制，Typecho 简约美观现代化风格主题。
  * 
  * @package BlueBubble
  * @author B1ue1nWh1te
- * @version 1.0.3
+ * @version 1.2.1
  * @link https://github.com/B1ue1nWh1te/BlueBubble
  */
 
@@ -22,12 +22,12 @@ $this->need('header.php');
                     <div class="col-lg-6 text-center">
                         <div class="index-avatar-container">
                             <img class="index-avatar" src="<?php
-                                if ($this->options->avatarUrl == '') {
-                                    $this->options->themeUrl("images/avatar.jpg");
-                                } else {
-                                    $this->options->avatarUrl();
-                                }
-                                ?>">
+                                                            if ($this->options->avatarUrl == '') {
+                                                                $this->options->themeUrl("images/avatar.jpg");
+                                                            } else {
+                                                                $this->options->avatarUrl();
+                                                            }
+                                                            ?>">
                         </div>
                         <h1 class="text-white"><?php $this->options->title() ?></h1>
                         <div class="horizen"></div>
@@ -42,8 +42,8 @@ $this->need('header.php');
             <!-- Article list -->
             <?php $first_flag = true; ?>
             <?php while ($this->next()) : ?>
-            <?php printAricle($this, $first_flag);
-				$first_flag = false; ?>
+                <?php printAricle($this, $first_flag);
+                $first_flag = false; ?>
             <?php endwhile; ?>
 
             <!-- Toggle page -->

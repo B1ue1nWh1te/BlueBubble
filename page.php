@@ -30,9 +30,9 @@ $this->need('header.php');
 
             <!-- Comment -->
             <?php if (!$this->hidden && $this->allow('comment')) : ?>
-            <div class="card shadow content-card">
-                <?php $this->need('comments.php'); ?>
-            </div>
+                <div class="card shadow content-card">
+                    <?php $this->need('comments.php'); ?>
+                </div>
             <?php endif; ?>
         </div>
     </section>
