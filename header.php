@@ -116,6 +116,9 @@
                         </div>
                     </div>
                     <ul class="navbar-nav ml-lg-auto align-items-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://seaverse.seaeye.cn" target="_blank" title="海域">海域</a>
+                        </li>
                         <?php
                         $this->widget('Widget_Contents_Page_List')->to($pages);
                         while ($pages->next()) :
